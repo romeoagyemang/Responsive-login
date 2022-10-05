@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+}
+.container{
+    background: #fff;
+    width: 560px;
+    padding: 25px 30px;
+    border-radius: 5px;
+
+}
+.container form .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    position: relative;
+}
+.container form .title::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 33px;
+    bottom: 2px;
+    left: 0;
+    border-radius: 5px;
+    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+
+}
+.container form .input-box{
+    width: 500px;
+    height: 45px;
+    margin-top: 25px;
+}
+.container form .input-box input{
+    height: 100%;
+    width: 500px;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+}
+.container form .underline::before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 500px;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+}
+.container form .underline::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100px;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+    transform: scaleX(0);
+    transition: all 0 ease;
+}
+.container form .input-box input:focus ~ .underline::after,
+.container form .input-box input:valid ~ .underline::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.container form .input-box input [type="submit"]{
+    font-size: 17px;
+    color: #fff;
+    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+}
+.container .option{
+    font-size: 14px;
+    text-align: center;
+}
+.container .twitter a,
+.container .facebook a{
+    display: block;
+    width: 500px;
+    height: 45px;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 20px;
+    color: #fff;
+    line-height: 45px;
+    border-radius: 5px;
+}
+.container .twitter i,
+.container .facebook i{
+    padding-right: 12px;  
+    font-size: 20px;
+}
+.container .twitter a{
+    margin: 20px 0 15px 0;
+    background: linear-gradient(to left, #00acee 0%, #1abeff 100%);    
+}
+.container .twitter a:hover{
+    background: linear-gradient(to right, #00acee 0%, #1abeff 100%);    
+}
+.container .facebook a{
+    margin: 20px 0 50px 0;
+    background: linear-gradient(to left, #3b5998 0%, #476bb8 100%);    
+}
+.container .facebook a:hover{
+    background: linear-gradient(to right, #3b5998 0%, #476bb8 100%);    
+}
